@@ -17,25 +17,33 @@ const ProductList = ()=>{
 
     return(
         <div>
-            {/* <table>
+            { <table>
                 <tr>
-                    <th>userId</th>
-                    <th>Title</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Categories</th>
+                    <th>Product Quantity</th>
+                    <th>Product Details</th>
+                    <th>Product Image1</th>
+                    <th>Product Image2</th>
+                    <th>Product Image3</th>
                 </tr>
                     {posts.map(post=>(
                 <tr key={post.id}>
-                    <td >{post.med_name}</td>
-                    <td >{post.med_details}</td>
+                    <td >{post.P_id}</td>
+                    <td >{post.P_name}</td>
+                    <td >{post.P_price}</td>
+                    <td >{post.P_categories}</td>
+                    <td >{post.P_quantity}</td>
+                    <td >{post.P_details}</td>
+                    <td >{post.P_img1}</td>
+                    <td >{post.P_img2}</td>
+                    <td >{post. P_img3}</td>
                 </tr>
                     ))}
-            </table> */}
-            {
-                posts.map(post=>(
-                    <ProductPost id={post.id}  P_id={post.P_id} P_name={post.P_name} P_price={post.P_price} P_categories={post.P_categories} P_quantity={post.P_quantity} P_details={post.P_details} P_img1={post.P_img1} P_img2={post.P_img2} P_img3={post.P_img3} key={post.id}></ProductPost>
-
-
-                ))
-            }
+            </table> }
+          
 
                 
         </div>

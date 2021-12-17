@@ -2,6 +2,7 @@ import React, {useState, userEffect} from "react";
 import axios from "axios";
 
 
+
 const Login = ()=>{
     let[token, setToken]= useState("");
     let[username, setUsername] = useState("");
@@ -15,17 +16,19 @@ const Login = ()=>{
             console.log(token);
             var user = {userId: token.userid, access_token:token.token};
             localStorage.setItem('user',JSON.stringify(user));
+            window.location.reload(false);
             // console.log(localStorage.getItem('user'));
         }).catch(err=>{
             console.log(err);
         });
+      
 
 
     }
     return(
         <div>
             <form>
-                Username:<input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}></input><br/><br/>
+               Username<input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}></input><br/><br/>
                 Password:<input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}></input>
 
             </form>

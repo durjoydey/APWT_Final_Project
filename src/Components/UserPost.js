@@ -3,9 +3,9 @@ import React from "react";
 const Post = (props)=>{
 
     const PostStyle={
-        backgroundColor: "#7badd1",
-        color:"#fff",
-        padding: "10px",
+        backgroundColor: "Blue",
+        color:"Pink",
+        padding: "15px",
     }
 
     return (

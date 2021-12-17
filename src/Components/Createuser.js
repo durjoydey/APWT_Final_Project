@@ -2,50 +2,94 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 
 
-
 function Createuser() {
-    const [name,setName]=useState("");
-    const [phone,setPhone]=useState("");
-    const [address,setAddress]=useState("");
-    const [username,setUsername]=useState("");
-    const [email,setEmail]=useState("");
-    const [password,setPassword]=useState("");
-    const [usertype,setUsertype]=useState("");
-    const [profileimg,setProfileimg]=useState("");
+  const [inputs, setInputs] = useState({
+    Name:"",Phone:"",Address:"",Username:"",Email:"",Password:"",Usertype:"Deliveryman",Profileimg:""
+  });
 
-   function saveData()
-   {
-     let data={name,phone,address,username,email,password,usertype,profileimg}
-   // console.warn(data);
-     fetch("http://127.0.0.1:8000/api/user/create", {
-       method: "POST",
-       headers: {
-         'Accept': 'application/json',
-         'Content-Type': 'application/json',
-       },
-       body:JSON.stringify(data)
-     }).then((resp)=>{
-       // console.warn("resp",resp);;
-       resp.json().then((result)=>{
-         console.warn("result",result)
-       })
-     })
-   }
-     return (
-       <div className="App">
-         <h1>POST API Example </h1>  
-         <label>Name:  <input type="text" value={name} onChange={(e)=>setName(e.target.value)}></input> </label> <br /> <br />
-        <label>Phone: <input type="text" value={phone} onChange={(e)=>setPhone(e.target.value)}></input> </label> <br /> <br />
-        <label>Address: <input type="text" value={address} onChange={(e)=>setAddress(e.target.value)}></input> </label> <br /> <br />
-        <label>UserName: <input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}></input> </label> <br /> <br />
-        <label>Email: <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}></input> </label> <br /> <br />
-        <label>Password: <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}></input> </label> <br /> <br />
-        <label>Usertype: <input type="text" value={usertype} onChange={(e)=>setUsertype(e.target.value)}></input> </label> <br /> <br />
-        <label>profile img: <input type="text" value={profileimg} onChange={(e)=>setProfileimg(e.target.value)}></input> </label> <br /> <br />
-         <button type="button" onClick={saveData} >Save New User</button>
-       </div>
-     );
-   }
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputs);
+    axios.post("user/create",inputs)
+    .then(resp=>{
+        var infos = resp.data;
+        console.log(infos);
+
+    }).catch(err=>{
+        console.log(err);
+    });
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+
+      <div>
+      Name:
+      <input type="text" name="Name" value={inputs.Name} placeholder="Name" onChange={handleChange} />
+
+      </div>
+      <div>
+        
+      Phone Number:
+      <input type="text" name="Phone" value={inputs.Phone} placeholder="Phone" onChange={handleChange} />
+
+      </div>
+     
+      <div>
+      Address:
+      <input type="text" name="Address" value={inputs.Address} placeholder="Address" onChange={handleChange} />
+
+      </div>
+     
+      <div>
+      Username:
+      <input type="text" name="Username" value={inputs.Username} placeholder="Username" onChange={handleChange} />
+
+      </div>
+     
+      <div>
+      Email:
+      <input type="text" name="Email" value={inputs.Email} placeholder="Email" onChange={handleChange} />
+
+      </div>
+     
+      <div>
+      Password:
+      <input type="text" name="Password" value={inputs.Password} placeholder="Password" onChange={handleChange} />
+
+      </div>
+    
+      <div>
+      Usertype:
+      <input type="text" name="Usertype" value={inputs.Usertype} placeholder="Usertype" onChange={handleChange} />
+
+      </div>
+
+      <div>
+      Profile Picture:
+      <input type="text" name="Profileimg" value={inputs.Profileimg} placeholder="Profileimg" onChange={handleChange} />
+
+      </div>
+
+
+
+
+
+
+        <input type="submit" />
+    </form>
+  )
+}
+
+
+
+
 
 
 export default Createuser;

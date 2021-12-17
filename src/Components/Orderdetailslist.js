@@ -12,31 +12,37 @@ const Orderdetailslist = ()=>{
             setPosts(resp.data);
         }).catch(err=>{
             console.log(err);
+            
         });
     },[]);
 
     return(
         <div>
-            {/* <table>
+            {<table>
                 <tr>
-                    <th>userId</th>
-                    <th>Title</th>
+                    <th>Order ID</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Catgegories</th>
+                    <th>Product Quantity</th>
+                    <th>Product Total Price</th>
+                    <th>Product size</th>
+                    <th>Username</th>
                 </tr>
                     {posts.map(post=>(
                 <tr key={post.id}>
-                    <td >{post.med_name}</td>
-                    <td >{post.med_details}</td>
+                    <td >{post.order_id}</td>
+                    <td >{post.P_name}</td>
+                    <td >{post.P_price}</td>
+                    <td >{post.P_categories}</td>
+                    <td >{post.P_quantity}</td>
+                    <td >{post.P_tprice}</td>
+                    <td >{post. P_size}</td>
+                    <td >{post.U_username}</td>
                 </tr>
                     ))}
-            </table> */}
-            {
-                posts.map(post=>(
-                    <OrderdetailsPost id={post.id}  order_id={post.order_id} P_name={post.P_name} P_price={post.P_price} P_categories={post.P_categories} P_quantity={post.P_quantity} P_tprice={post.P_tprice} P_size={post.P_size} U_username={post.U_username} key={post.id}></OrderdetailsPost>
-
-
-                ))
-            }
-
+            </table> }
+           
                 
         </div>
     )

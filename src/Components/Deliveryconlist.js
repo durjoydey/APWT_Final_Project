@@ -17,25 +17,25 @@ const Deliveryconlist = ()=>{
 
     return(
         <div>
-            {/* <table>
+            { <table>
                 <tr>
-                    <th>userId</th>
-                    <th>Title</th>
+                    <th>Order ID</th>
+                    <th>Payment Price</th>
+                    <th>Username</th>
+                    <th>Delivery Status</th>
+                    <th>Delivery Time</th>
                 </tr>
                     {posts.map(post=>(
                 <tr key={post.id}>
-                    <td >{post.med_name}</td>
-                    <td >{post.med_details}</td>
+                    <td >{post.Ord_id}</td>
+                    <td >{post.Pay_price}</td>
+                    <td >{post.D_username}</td>
+                    <td >{post.D_Status}</td>
+                    <td >{post.D_time}</td>
                 </tr>
                     ))}
-            </table> */}
-            {
-                posts.map(post=>(
-                    <DeliveryconPost id={post.id}  Ord_id={post.Ord_id} Pay_price={post.Pay_price} D_username={post.D_username} D_Status={post.D_Status} D_time={post.D_time} key={post.id}></DeliveryconPost>
-
-
-                ))
-            }
+            </table> }
+         
 
                 
         </div>

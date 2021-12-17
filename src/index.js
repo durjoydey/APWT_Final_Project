@@ -17,6 +17,7 @@ import Orderdetailslist from './Components/Orderdetailslist';
 import Orderlist from './Components/Orderlist';
 import Createuser from './Components/Createuser';
 import Login from './Components/Login';
+import Editorder from './Components/Editorder';
 import axios from "axios";
 
 var token = null;
@@ -67,6 +68,9 @@ ReactDOM.render(
         </Route>
         <Route exact path="/login">
           <Login/>
+        </Route>
+        <Route exact path="/editorder/:id">
+          <Editorder/>
         </Route>
         </Switch>
       <Foot/>
