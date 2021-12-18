@@ -1,14 +1,18 @@
 import React from "react"
 
 const Foot = () => {
+  
+
     return(
-<footer>
+<footer style={{backgroundColor: "lightblue"}}>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Home Delivery</a></li>
+                        
+                        
+                        <h3  >Services</h3>
+                        <ul >
+                            <li ><a href="#">Home Delivery</a></li>
                             <li><a href="#">Cash on delivery</a></li>
                             <li><a href="#">Online payment</a></li>
                         </ul>

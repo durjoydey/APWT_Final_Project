@@ -4,6 +4,12 @@ import OrderdetailsPost from './OrderdetailsPost';
 
 const Orderdetailslist = ()=>{
     const [posts, setPosts] = useState([]);
+    const PostStyle={
+        backgroundColor: "pink",
+        color:"black",
+        padding: "10px",
+    }
+
 
     useEffect(()=>{
         axios.get("orderdetail/list")
@@ -18,10 +24,10 @@ const Orderdetailslist = ()=>{
 
     return(
         <div>
-            {<table>
+            {<table style={{backgroundColor: "lightblue"}} align="center">
                 <tr>
-                    <th>Order ID</th>
-                    <th>Product Name</th>
+                   <th>Order ID</th>
+                  <th>Product Name</th>
                     <th>Product Price</th>
                     <th>Product Catgegories</th>
                     <th>Product Quantity</th>
@@ -29,8 +35,8 @@ const Orderdetailslist = ()=>{
                     <th>Product size</th>
                     <th>Username</th>
                 </tr>
-                    {posts.map(post=>(
-                <tr key={post.id}>
+                {posts.map(post=>(
+                <tr key={post.id} style={PostStyle}>
                     <td >{post.order_id}</td>
                     <td >{post.P_name}</td>
                     <td >{post.P_price}</td>

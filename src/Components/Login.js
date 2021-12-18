@@ -26,9 +26,10 @@ const Login = ()=>{
 
     }
     return(
-        <div>
-            <form>
-               Username<input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}></input><br/><br/>
+        <div align="center">
+            <form >
+                <h1 style={{backgroundColor: "lightblue"}}>Login</h1>
+               Username:<input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}></input><br/><br/>
                 Password:<input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}></input>
 
             </form>
@@ -36,5 +37,7 @@ const Login = ()=>{
         </div>
         
     )
+
+    
 }
 export default Login;

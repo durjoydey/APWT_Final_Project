@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 const Userlist = ()=>{
     const [posts, setPosts] = useState([]);
 
+    const PostStyle={
+        backgroundColor: "pink",
+        color:"black",
+        padding: "10px",
+    }
+
     useEffect(()=>{
         axios.get("http://127.0.0.1:8000/api/user/list")
         .then(resp=>{
@@ -17,7 +23,7 @@ const Userlist = ()=>{
 
     return(
         <div>
-            { <table>
+            { <table style={{backgroundColor: "lightblue"}} align="center">
                 <tr>
                     <th>Name</th>
                     <th>Phone Number</th>
@@ -28,8 +34,8 @@ const Userlist = ()=>{
                     <th>Usertype</th>
                     <th>Image</th>
                 </tr>
-                    {posts.map(post=>(
-                <tr key={post.id}>
+                {posts.map(post=>(
+                <tr key={post.id} style={PostStyle}>
                     <td >{post.U_Name}</td>
                     <td >{post.U_phone}</td>
                     <td >{post.U_address}</td>

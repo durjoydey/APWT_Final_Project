@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 
 const Orderlist = ()=>{
     const [posts, setPosts] = useState([]);
+    const PostStyle={
+        backgroundColor: "pink",
+        color:"black",
+        padding: "10px",
+    }
 
     useEffect(()=>{
         axios.get("myorder/list")
@@ -18,7 +23,7 @@ const Orderlist = ()=>{
 
     return(
         <div>
-            { <table>
+            { <table style={{backgroundColor: "lightblue"}} align="center">
                 <tr>
                     <th>Order ID</th>
                     <th>User ID</th>
@@ -27,8 +32,8 @@ const Orderlist = ()=>{
                     <th>Payment Type</th>
                     <th>Order Status</th>
                 </tr>
-                    {posts.map(post=>(
-                <tr key={post.id}>
+                {posts.map(post=>(
+                <tr key={post.id} style={PostStyle}>
                     <td >{post.O_id}</td>
                     <td >{post.user_id}</td>
                     <td >{post.U_username}</td>

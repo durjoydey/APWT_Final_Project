@@ -5,6 +5,12 @@ import DeliveryconPost from './DeliveryconPost';
 const Deliveryconlist = ()=>{
     const [posts, setPosts] = useState([]);
 
+    const PostStyle={
+        backgroundColor: "pink",
+        color:"blcak",
+        padding: "10px",
+    }
+
     useEffect(()=>{
         axios.get("deliverycon/list")
         .then(resp=>{
@@ -17,24 +23,26 @@ const Deliveryconlist = ()=>{
 
     return(
         <div>
-            { <table>
+             <table style={{backgroundColor: "lightblue"}} align="center">
                 <tr>
-                    <th>Order ID</th>
-                    <th>Payment Price</th>
-                    <th>Username</th>
-                    <th>Delivery Status</th>
-                    <th>Delivery Time</th>
+                    <th>Order ID </th> <b/>
+                    <th>Payment Price </th> <b/>
+                    <th>Delivery Username</th> <b/>
+                    <th>Delivery Status</th> <b/>
+                    <th>Delivery Time </th> <b/>
+
                 </tr>
                     {posts.map(post=>(
-                <tr key={post.id}>
-                    <td >{post.Ord_id}</td>
-                    <td >{post.Pay_price}</td>
-                    <td >{post.D_username}</td>
-                    <td >{post.D_Status}</td>
-                    <td >{post.D_time}</td>
+                <tr key={post.id} style={PostStyle}>
+                    <td >{post.Ord_id}</td> <b/>
+                    <td >{post.Pay_price}</td> <b/>
+                    <td >{post.D_username}</td> <b/>
+                    <td >{post.D_Status}</td> <b/>
+                    <td >{post.D_time}</td> <b/>
+                  
                 </tr>
                     ))}
-            </table> }
+            </table> 
          
 
                 

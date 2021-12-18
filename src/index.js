@@ -19,6 +19,7 @@ import Createuser from './Components/Createuser';
 import Login from './Components/Login';
 import Editorder from './Components/Editorder';
 import Edituser from './Components/Edituser';
+
 import axios from "axios";
 
 var token = null;
@@ -75,10 +76,14 @@ ReactDOM.render(
         </Route>
         <Route exact path="/edituser/:id">
           <Edituser/>
+
         </Route>
+       
         </Switch>
       <Foot/>
+     
     </Router>
+    
   </React.StrictMode>,
   document.getElementById('root')
   );

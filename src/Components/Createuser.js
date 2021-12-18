@@ -27,8 +27,8 @@ function Createuser() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-
+    <form  align="center" onSubmit={handleSubmit}>
+<h1 style={{backgroundColor: "lightblue"}}>Resgistration</h1>
       <div>
       Name:
       <input type="text" name="Name" value={inputs.Name} placeholder="Name" onChange={handleChange} />
