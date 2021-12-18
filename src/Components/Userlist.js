@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import UserPost from './UserPost';
-
+import { Link } from "react-router-dom";
 const Userlist = ()=>{
     const [posts, setPosts] = useState([]);
 
@@ -38,6 +38,7 @@ const Userlist = ()=>{
                     <td >{post. U_password}</td>
                     <td >{post.Usertype}</td>
                     <td >{post. U_profileimg}</td>
+                    <td><Link to={`edituser/${post.id}`}>Update Profile</Link></td>
                 </tr>
                     ))}
             </table> }

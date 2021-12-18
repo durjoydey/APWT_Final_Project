@@ -20,7 +20,7 @@ function Createuser() {
     .then(resp=>{
         var infos = resp.data;
         console.log(infos);
-
+        window.location='/userlist';
     }).catch(err=>{
         console.log(err);
     });

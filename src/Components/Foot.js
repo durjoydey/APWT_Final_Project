@@ -23,7 +23,7 @@ const Foot = () => {
                     </div>
                     <div class="col-md-6 item text">
                         <h3>Company Name</h3>
-                        <p>ABC E-Commerce shop, Dhaka, Bangladesh</p>
+                        <p>E-Flip E-Commerce shop, Dhaka, Bangladesh</p>
                     </div>
                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
                 </div>

@@ -35,7 +35,7 @@ function Editorder() {
     .then(resp=>{
         var infos = resp.data;
         console.log(infos);
-
+window.location='/orderlist';
     }).catch(err=>{
         console.log(err);
     });
@@ -76,7 +76,7 @@ function Editorder() {
      
       <div>
       Order Status:
-      <select name="P_categories" onChange={handleChange} value={inputs.O_status}>
+      <select name="O_status" onChange={handleChange} value={inputs.O_status}>
           <option value="">Choose...</option>
           <option value="Proccessing">Proccessing</option>
           <option value="Order has been accepted">Order has been accepted</option>
