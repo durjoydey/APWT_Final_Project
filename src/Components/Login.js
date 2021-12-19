@@ -29,8 +29,8 @@ const Login = ()=>{
         <div align="center">
             <form >
                 <h1 style={{backgroundColor: "lightblue"}}>Login</h1>
-               Username:<input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}></input><br/><br/>
-                Password:<input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}></input>
+              <b> Username:</b><input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}></input><br/><br/>
+               <b> Password:</b><input type="password" value={password} onChange={(e)=>setPassword(e.target.value)}></input>
 
             </form>
                 <button onClick={loginSubmit}>Login</button>

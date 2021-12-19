@@ -29,60 +29,61 @@ function Createuser() {
   return (
     <form  align="center" onSubmit={handleSubmit}>
 <h1 style={{backgroundColor: "lightblue"}}>Resgistration</h1>
+
       <div>
-      Name:
+     <b> Name:</b>
       <input type="text" name="Name" value={inputs.Name} placeholder="Name" onChange={handleChange} />
 
       </div>
       <div>
         
-      Phone Number:
+      <b>Phone Number:</b>
       <input type="text" name="Phone" value={inputs.Phone} placeholder="Phone" onChange={handleChange} />
 
       </div>
      
       <div>
-      Address:
+      <b>Address:</b>
       <input type="text" name="Address" value={inputs.Address} placeholder="Address" onChange={handleChange} />
 
       </div>
      
       <div>
-      Username:
+     <b>Username:</b>
       <input type="text" name="Username" value={inputs.Username} placeholder="Username" onChange={handleChange} />
 
       </div>
      
       <div>
-      Email:
+      <b>Email:</b>
       <input type="text" name="Email" value={inputs.Email} placeholder="Email" onChange={handleChange} />
 
       </div>
      
       <div>
-      Password:
+     <b> Password:</b>
       <input type="text" name="Password" value={inputs.Password} placeholder="Password" onChange={handleChange} />
 
       </div>
     
       <div>
-      Usertype:
+      <b>Usertype:</b>
       <input type="text" name="Usertype" value={inputs.Usertype} placeholder="Usertype" onChange={handleChange} />
 
       </div>
 
       <div>
-      Profile Picture:
+      <b>Profile Picture:</b>
       <input type="text" name="Profileimg" value={inputs.Profileimg} placeholder="Profileimg" onChange={handleChange} />
 
       </div>
 
 
+    
 
 
 
-
-        <input type="submit" />
+       <input type="submit" />
     </form>
   )
 }
